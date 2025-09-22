@@ -9,10 +9,7 @@
 </head>
 
 <body>
-
-    <div class="particulas">
-
-    </div>
+    <div class="light-waves-bg"></div>
 
     <nav class="navegacao">
         <ul class="menu">
@@ -41,9 +38,14 @@
         <h2 class="sobre-titulo">Sobre Mim</h2>
         <div class="sobre-caixa">
             <p class="sobre-paragrafo">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, nulla nostrum illum hic quasi
-                alias, similique nobis, cupiditate ut tenetur aut? Iste saepe illum dolore laudantium doloremque,
-                praesentium hic perferendis?
+                Cursando o 2º semestre de Análise e Desenvolvimento de Sistemas no UniCEUB, busco aprimorar
+                constantemente minhas habilidades técnicas.
+                Possuo conhecimento em lógica de programação e desenvolvimento web (HTML, CSS e JavaScript), além de
+                experiência com MySQL para banco de dados.
+                Tenho contato com Python e Java (iniciante), e sou proficiente no uso do Pacote Office e Google
+                Workspace.
+                Minha facilidade em aprender novas tecnologias, aliada ao raciocínio lógico e à proatividade, me permite
+                atuar com foco total na qualidade e nos resultados.
             </p>
         </div>
     </section>
@@ -55,7 +57,7 @@
             <div class="projetos-card">
                 <img src="" alt="Projeto 1" class="projetos-imagem">
                 <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">Loja de Carros</h3>
+                    <h3 class="info-projetos">Título</h3>
                     <p class="paragrafo-projetos">...</p>
                 </div>
             </div>
@@ -63,7 +65,7 @@
             <div class="projetos-card">
                 <img src="" alt="Projeto 2" class="projetos-imagem">
                 <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">Página de Viagens</h3>
+                    <h3 class="info-projetos">Título</h3>
                     <p class="paragrafo-projetos">...</p>
                 </div>
             </div>
@@ -71,7 +73,7 @@
             <div class="projetos-card">
                 <img src="" alt="Projeto 3" class="projetos-imagem">
                 <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">Microsoft</h3>
+                    <h3 class="info-projetos">Título</h3>
                     <p class="paragrafo-projetos">...</p>
                 </div>
             </div>
@@ -82,12 +84,14 @@
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Entre em Contato</h2>
 
+        <h3 class="contatos-subtitulo">Whatsapp</h3>
+
         <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
             <div class="grupo-form">
                 <input placeholder="Nome" class="campo-form" id="nome">
             </div>
             <div class="grupo-form">
-                <textarea placeholder="Digite sua Mensagem" class="campo-form" rows="8" id="mensagem"></textarea>
+                <textarea placeholder="Digite sua Mensagem..." class="campo-form" rows="8" id="mensagem"></textarea>
             </div>
 
             <button type="submit" class="botao-form">Enviar Whatsapp</button>
@@ -111,8 +115,40 @@
             window.open(url, '_blank')
         }
 
-
     </script>
+
+    <section>
+        <h3 class="contatos-subtitulo">Instagram</h3>
+        <form class="formulario-contato" id="formulario">
+            
+            <button class="botao-form" onclick="window.open('https://www.instagram.com/gustavvb_/', '_blank')">
+                Visite meu Instagram
+            </button>
+
+        </form>
+    </section>
+
+    <section>
+        <h3 class="contatos-subtitulo">Git Hub</h3>
+        <form class="formulario-contato" id="formulario">
+            
+            <button class="botao-form" onclick="window.open('https://github.com/gustavob63', '_blank')">
+                Meus Repositórios
+            </button>
+
+        </form>
+    </section>
+
+    <section>
+        <h3 class="contatos-subtitulo">LinkedIn</h3>
+        <form class="formulario-contato" id="formulario">
+            
+            <button class="botao-form" onclick="window.open('https://www.linkedin.com/in/gustavo-barbosa-oliveira-436b25351/', '_blank')">
+                Meu Perfil do LinkedIn
+            </button>
+
+        </form>
+    </section>
 </body>
 
 </html>
