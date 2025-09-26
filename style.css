@@ -1,3 +1,5 @@
+/* ESTILO GERAL */
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +27,19 @@ body {
     overflow-x: hidden;
 }
 
-/* Fundo do Site*/
+h1 {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: bold;
+    margin: 20px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* FUNDO DO SITE */
 
 .light-waves-bg {
     position: fixed;
@@ -35,19 +49,19 @@ body {
     height: 100%;
     z-index: -1;
     pointer-events: none;
-    background-color: #0b0b1c;
+    background-color: #000000;
     overflow: hidden;
 
     background-image:
-        radial-gradient(circle at 15% 30%, rgba(79, 70, 229, 0.4) 0%, transparent 60%),
-        radial-gradient(circle at 85% 70%, rgba(124, 58, 237, 0.4) 0%, transparent 60%),
-        radial-gradient(circle at 40% 90%, rgba(42, 14, 79, 0.3) 0%, transparent 70%),
-        radial-gradient(circle at 60% 10%, rgba(30, 30, 60, 0.3) 0%, transparent 70%);
+        radial-gradient(circle at 15% 30%, rgba(7, 9, 116, 0.4) 0%, transparent 60%),
+        radial-gradient(circle at 85% 70%, rgba(23, 48, 190, 0.4) 0%, transparent 60%),
+        radial-gradient(circle at 40% 90%, rgba(63, 70, 138, 0.3) 0%, transparent 70%),
+        radial-gradient(circle at 60% 10%, rgba(10, 10, 211, 0.3) 0%, transparent 70%);
+        
     filter: blur(80px);
 }
 
-
-/* Menu */
+/* MENU */
 
 .navegacao {
     position: fixed;
@@ -89,34 +103,53 @@ body {
     width: 100%;
 }
 
-/*Foto de perfil*/
+/* PERFIL */
 
-.foto-perfil {
-    width: 350px;
-    height: 350px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border-radius: 50%;
-    border: 4px solid var(--vidro);
+.foto-de-perfil-container {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 100px;
+
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+
+    position: relative;
     animation: flutuar 5s ease-in-out infinite;
 }
 
+.foto-de-perfil-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e2dcdc, #26124d);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    z-index: -1;
+    border: none;
+}
+
+.foto-de-perfil-container img {
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    object-fit: cover;
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
 @keyframes flutuar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(-20px);
     }
-}
-
-/* Sobre mim */
-
-h1 {
-    font-size: 3.5rem;
-    color: white;
-    font-weight: bold;
-    margin: 20px;
 }
 
 .cabecalho {
@@ -130,23 +163,39 @@ h1 {
 .cabecalho-sub-titulo {
     font-size: 1.5rem;
     color: var(--claro);
+    text-align: center;
 }
+
+.perfil-e-sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.perfil-completo {
+    position: relative;
+    margin-top: -50px;
+}
+
+/* SOBRE MIM */
 
 .sobre {
     padding: 6rem 2rem;
 }
 
 .sobre-titulo {
-    font-size: 3rem;
-    color: var(--claro);
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
 }
 
 .sobre-caixa {
     padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 650px;
+    margin: 20px auto;
     border-radius: 16px;
     border: 1px solid var(--vidro);
     backdrop-filter: blur(10px);
@@ -158,7 +207,61 @@ h1 {
     font-size: 1.2rem;
 }
 
-/* Projetos */
+/* HABILIDADES */
+
+.habilidades-titulo {
+    font-size: 2.5rem;
+    margin-top: -100px;
+}
+
+.habilidades-secao {
+    padding: 6rem 2rem;
+}
+
+.habilidades-caixa {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.habilidades-conteiner-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.habilidades-paragrafo {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.habilidades {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card-habilidade {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.card-habilidade:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* PROJETOS */
 
 .projetos {
     padding: 6rem 2rem;
@@ -207,11 +310,12 @@ h1 {
     color: rgba(226, 232, 240, 0.8);
     line-height: 1.25rem;
 }
+
 .caixa-textos-projetos {
     padding: 1.5rem;
 }
 
-/* Contatos */
+/* CONTATOS */
 
 .contatos {
     padding: 6rem 2rem;
@@ -274,4 +378,14 @@ h1 {
 .botao-form:hover {
     transform: translateY(-4px);
     box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
+/* Links Sociais */
+
+.links-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 2rem;
 }
